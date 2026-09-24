@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stake Promo Code RAZOR | 200% Bonus up to $3,000</title>
+<style>
+/* ================= RESET & BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body {
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #0b1219;
+}
+a { text-decoration: none; color: inherit; }
+button { border: none; cursor: pointer; font-family: inherit; }
+img { display: block; max-width: 100%; }
+
+/* ================= BACKGROUND CANVAS ================= */
+#fx-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ================= KEYFRAMES ================= */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+@keyframes floatCoin {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+    50%      { transform: translateY(-15px) rotate(10deg); opacity: 0.9; }
+}
+@keyframes slideDownText {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= LOADER ================= */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #0b1219;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#loader.hidden { opacity: 0; visibility: hidden; }
+.loader__ring {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* ================= HEADER ================= */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: rgba(15, 23, 32, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: fadeDown 0.7s ease both;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.header__logo img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+}
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header__actions .icon-btn {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+}
+.header__actions .icon-btn .dot {
+    position: absolute;
+    top: 6px; right: 8px;
+    width: 8px; height: 8px;
+    background: #ef4444;
+    border-radius: 50%;
+}
+.btn-header {
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.btn-header--login {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+.btn-header--register {
+    background: #3b82f6;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+.btn-header--register:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+.menu-icon {
+    font-size: 24px;
+    color: #fff;
+    background: transparent;
+    padding: 0 5px;
+}
+
+/* ================= WRAPPER ================= */
+.wrapper {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+    text-align: center;
+    padding: 40px 0 20px;
+    animation: fadeUp 1s ease 0.2s both;
+}
+.hero-section p {
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+.btn-primary {
+    display: inline-block;
+    background: #ffffff;
+    color: #0f172a;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 0 #d1d5db;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #d1d5db;
+}
+.btn-primary:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 0 #d1d5db;
+}
+
+/* ================= PROMO CARD ================= */
+.promo-card {
+    background: linear-gradient(145deg, #1e2a3a, #16202d);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px 0 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    animation: fadeUp 1s ease 0.4s both;
+    position: relative;
+    overflow: hidden;
+}
+.promo-card::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+.promo-card__logo {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 15px;
+    display: block;
+    text-shadow: 0 2px 10px rgba(255,255,255,0.2);
+}
+.promo-card__title {
+    font-size: 32px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.1;
+}
+.promo-card__subtitle {
+    font-size: 15px;
+    color: #9ca3af;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.promo-card .btn-primary {
+    padding: 14px 50px;
+}
+
+/* ================= LEADERBOARD ================= */
+.leaderboard-section {
+    margin-bottom: 40px;
+    animation: fadeUp 1s ease 0.6s both;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+.section-header h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #9ca3af;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.section-header a {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3b82f6;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.leaderboard-card {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.leaderboard-card__header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.leaderboard-card__header img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+.leaderboard-card__header-text h4 {
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+}
+.leaderboard-card__header-text p {
+    font-size: 12px;
+    color: #bfdbfe;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.leaderboard-card__header-text span {
+    color: #fff;
+    font-weight: 800;
+}
+.leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.leaderboard-item__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.leaderboard-item__rank {
+    font-size: 22px;
+    width: 30px;
+    text-align: center;
+}
+.leaderboard-item__info h5 {
+    font-size: 15px;
+    font-weight: 800;
+    color: #fff;
+}
+.leaderboard-item__info p {
+    font-size: 12px;
+    color: #9ca3af;
+}
+.leaderboard-item__right {
+    font-size: 18px;
+    font-weight: 900;
+    color: #22c55e;
+}
+.leaderboard-card .btn-full {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #ffffff;
+    color: #0f172a;
+    padding: 14px 0;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    box-shadow: 0 4px 0 #d1d5db;
+    transition: transform 0.2s;
+}
+.leaderboard-card .btn-full:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #d1d5db;
+}
+
+/* ================= ACTIVE BONUSES SECTION (NEW) ================= */
+.bonuses-section {
+    margin-bottom: 40px;
+    animation: fadeUp 1s ease 0.7s both;
+}
+.bonuses-section .section-header {
+    margin-bottom: 20px;
+}
+.bonus-card {
+    background: #111827;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+.bonus-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+.bonus-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.bonus-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.bonus-tag--special {
+    background: rgba(234, 88, 12, 0.2);
+    color: #fb923c;
+    border: 1px solid rgba(234, 88, 12, 0.4);
+}
+.bonus-tag--monthly {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+.bonus-tag--welcome {
+    background: rgba(217, 70, 239, 0.2);
+    color: #e879f9;
+    border: 1px solid rgba(217, 70, 239, 0.4);
+}
+.bonus-card__timer {
+    font-size: 12px;
+    color: #f59e0b;
+    font-weight: 700;
+}
+.bonus-card__title {
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.bonus-card__desc {
+    font-size: 14px;
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.bonus-card__desc span {
+    color: #3b82f6;
+    font-weight: 700;
+}
+.bonus-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.bonus-card__value h4 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+}
+.bonus-card__value p {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+.bonus-card__value p span {
+    color: #3b82f6;
+    font-weight: 700;
+}
+.bonus-card__btn {
+    background: #ffffff;
+    color: #0f172a;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 0 #d1d5db;
+    white-space: nowrap;
+    transition: transform 0.2s;
+}
+.bonus-card__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 #d1d5db;
+}
+
+/* ================= HOW TO USE SECTION (NEW) ================= */
+.how-to-section {
+    margin-bottom: 40px;
+    animation: fadeUp 1s ease 0.8s both;
+}
+.how-to-section h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #9ca3af;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0 5px;
+}
+.step-card {
+    background: #111827;
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.step-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+.step-number {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    background: #1e3a8a;
+    color: #60a5fa;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 900;
+}
+.step-content h4 {
+    font-size: 17px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 6px;
+}
+.step-content p {
+    font-size: 14px;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+/* ================= FULL IMAGE SECTION (NEW) ================= */
+.full-image-section {
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeUp 1s ease 0.9s both;
+}
+.full-image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.full-image-section:hover img {
+    transform: scale(1.02);
+}
+
+/* ================= POP-UP MODAL ================= */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    padding: 20px;
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-content {
+    background: #111827;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+    transform: scale(0.8) translateY(30px);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.modal-overlay.active .modal-content {
+    transform: scale(1) translateY(0);
+}
+.modal-close {
+    position: absolute;
+    top: 15px; right: 20px;
+    background: transparent;
+    color: #9ca3af;
+    font-size: 24px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.modal-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    display: inline-block;
+    animation: slideDownText 0.8s ease both;
+}
+.modal-title {
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    animation: slideDownText 0.8s ease 0.1s both;
+}
+.modal-desc {
+    font-size: 15px;
+    color: #9ca3af;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    animation: slideDownText 0.8s ease 0.2s both;
+}
+.modal-desc strong {
+    color: #fff;
+}
+.promo-code-box {
+    background: #1f2937;
+    border: 1px dashed #3b82f6;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    animation: slideDownText 0.8s ease 0.3s both;
+}
+.promo-code-box p {
+    font-size: 12px;
+    color: #9ca3af;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.promo-code-box h4 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #3b82f6;
+    letter-spacing: 4px;
+}
+.btn-modal-primary {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+    color: #0f172a;
+    padding: 16px 0;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 0 #d1d5db;
+    transition: transform 0.2s;
+    animation: slideDownText 0.8s ease 0.4s both;
+}
+.btn-modal-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #d1d5db;
+}
+.modal-divider {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    animation: slideDownText 0.8s ease 0.5s both;
+}
+.modal-divider::before, .modal-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #374151;
+}
+.modal-divider::before { margin-right: 10px; }
+.modal-divider::after { margin-left: 10px; }
+
+.btn-telegram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: #d946ef;
+    color: #fff;
+    padding: 14px 0;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    animation: slideDownText 0.8s ease 0.6s both;
+}
+.btn-telegram:hover {
+    background: #c026d3;
+    transform: translateY(-2px);
+}
+.modal-skip {
+    display: inline-block;
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 5px;
+    cursor: pointer;
+    animation: slideDownText 0.8s ease 0.7s both;
+}
+.modal-skip:hover {
+    color: #9ca3af;
+}
+
+/* ================= FLOATING COINS ================= */
+.coin-3d {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatCoin 6s ease-in-out infinite;
+    opacity: 0.4;
+}
+.coin-3d--btc  { top: 10%; left: 5%; }
+.coin-3d--eth  { top: 25%; right: 8%; animation-delay: 1s; }
+.coin-3d--usdt { bottom: 20%; left: 10%; animation-delay: 2s; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+    .header__logo img { height: 30px; }
+    .btn-header { padding: 6px 14px; font-size: 12px; }
+    .promo-card__title { font-size: 26px; }
+    .promo-card__logo { font-size: 36px; }
+    .leaderboard-item__right { font-size: 16px; }
+    .modal-title { font-size: 24px; }
+    .promo-code-box h4 { font-size: 28px; }
+    
+    .bonus-card__bottom { flex-direction: column; align-items: stretch; }
+    .bonus-card__btn { width: 100%; text-align: center; }
+    .step-card { padding: 18px; gap: 14px; }
+    .step-number { width: 40px; height: 40px; min-width: 40px; font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+    <canvas id="fx-canvas"></canvas>
+
+    <div id="loader">
+        <div class="loader__ring"></div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header__logo">
+            <span style="font-family: 'Impact', sans-serif; font-size: 24px; letter-spacing: 1px; color: #fff;">
+                RAZ<span style="color: #d946ef;">O</span>R
+            </span>
+        </div>
+        <div class="header__actions">
+            <button class="icon-btn">🔔<span class="dot"></span></button>
+            <button class="btn-header btn-header--login">Login</button>
+            <a href="https://stake.com/registration" target="_blank" class="btn-header btn-header--register">Register</a>
+            <button class="menu-icon">☰</button>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="wrapper">
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <p>REWARDS WITH CODE RAZOR.</p>
+            <a href="https://stake.com/registration" target="_blank" class="btn-primary">LEARN MORE ABOUT STAKE</a>
+        </section>
+
+        <!-- Promo Card -->
+        <section class="promo-card">
+            <img class="coin-3d coin-3d--btc" src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png" alt="BTC">
+            <img class="coin-3d coin-3d--eth" src="https://cdn-icons-png.flaticon.com/512/6001/6001527.png" alt="ETH">
+            <img class="coin-3d coin-3d--usdt" src="https://cdn-icons-png.flaticon.com/512/825/825508.png" alt="USDT">
+            
+            <span class="promo-card__logo">Stake</span>
+            <h2 class="promo-card__title">200% UP TO $3,000</h2>
+            <p class="promo-card__subtitle">WITH CODE "RAZOR"</p>
+            <a href="https://stake.com/registration" target="_blank" class="btn-primary">CLAIM NOW</a>
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section class="leaderboard-section">
+            <div class="section-header">
+                <h3>Featured · Monthly Leaderboard</h3>
+                <a href="#">View all →</a>
+            </div>
+            <div class="leaderboard-card">
+                <div class="leaderboard-card__header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Stake_logo.svg/1200px-Stake_logo.svg.png" alt="Stake Logo" style="filter: invert(1);">
+                    <div class="leaderboard-card__header-text">
+                        <h4>Monthly Leaderboard</h4>
+                        <p><span>$1,000 Prize Pool</span> · Code RAZOR</p>
+                    </div>
+                </div>
+                <div class="leaderboard-list">
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-item__left">
+                            <div class="leaderboard-item__rank">🥇</div>
+                            <div class="leaderboard-item__info">
+                                <h5>And***</h5>
+                                <p>$12,752.61 wagered</p>
+                            </div>
+                        </div>
+                        <div class="leaderboard-item__right">$500</div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-item__left">
+                            <div class="leaderboard-item__rank">🥈</div>
+                            <div class="leaderboard-item__info">
+                                <h5>Van***</h5>
+                                <p>$6,944.57 wagered</p>
+                            </div>
+                        </div>
+                        <div class="leaderboard-item__right">$350</div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-item__left">
+                            <div class="leaderboard-item__rank">🥉</div>
+                            <div class="leaderboard-item__info">
+                                <h5>ree***</h5>
+                                <p>$6,369.46 wagered</p>
+                            </div>
+                        </div>
+                        <div class="leaderboard-item__right">$150</div>
+                    </div>
+                </div>
+                <a href="https://stake.com/registration" target="_blank" class="btn-full">VIEW FULL LEADERBOARD</a>
+            </div>
+        </section>
+
+        <!-- Active Bonuses Section (NEW) -->
+        <section class="bonuses-section">
+            <div class="section-header">
+                <h3>Active Bonuses</h3>
+                <a href="#">View all →</a>
+            </div>
+
+            <!-- Bonus 1: Special -->
+            <div class="bonus-card">
+                <div class="bonus-card__top">
+                    <span class="bonus-tag bonus-tag--special">🔥 Special</span>
+                    <span class="bonus-card__timer">6d left</span>
+                </div>
+                <h4 class="bonus-card__title">Stake Post Monthly Bonus - September 2026</h4>
+                <p class="bonus-card__desc">
+                    The Stake post-monthly bonus for September 2026 drops a few days after the main monthly bonus, typically around the 18th-20th. Secondary VIP top-up. Claim with code <span>RAZOR</span>.
+                </p>
+                <div class="bonus-card__bottom">
+                    <div class="bonus-card__value">
+                        <h4>Up to $250 <span style="font-size:14px; color:#9ca3af;">(VIP-tier dependent)</span></h4>
+                        <p>Code: <span>RAZOR</span></p>
+                    </div>
+                    <a href="https://stake.com/registration" target="_blank" class="bonus-card__btn">CLAIM NOW</a>
+                </div>
+            </div>
+
+            <!-- Bonus 2: Monthly -->
+            <div class="bonus-card">
+                <div class="bonus-card__top">
+                    <span class="bonus-tag bonus-tag--monthly">🎁 Monthly</span>
+                    <span class="bonus-card__timer">6d left</span>
+                </div>
+                <h4 class="bonus-card__title">Stake Monthly Bonus - September 2026</h4>
+                <p class="bonus-card__desc">
+                    The Stake monthly bonus for September 2026 arrives via email around the 15th. Amount depends on VIP level and previous-month wagering. Claim with code <span>RAZOR</span>.
+                </p>
+                <div class="bonus-card__bottom">
+                    <div class="bonus-card__value">
+                        <h4>Up to $500 <span style="font-size:14px; color:#9ca3af;">(VIP-tier dependent)</span></h4>
+                        <p>Code: <span>RAZOR</span></p>
+                    </div>
+                    <a href="https://stake.com/registration" target="_blank" class="bonus-card__btn">CLAIM NOW</a>
+                </div>
+            </div>
+
+            <!-- Bonus 3: Welcome -->
+            <div class="bonus-card">
+                <div class="bonus-card__top">
+                    <span class="bonus-tag bonus-tag--welcome">🎁 Welcome</span>
+                </div>
+                <h4 class="bonus-card__title">Stake Welcome Bonus - New Players</h4>
+                <p class="bonus-card__desc">
+                    New to Stake? Sign up with code <span>RAZOR</span> and get 200% deposit bonus up to $3,000 on your first deposit.
+                </p>
+                <div class="bonus-card__bottom">
+                    <div class="bonus-card__value">
+                        <h4>200% up to $3,000</h4>
+                        <p>Code: <span>RAZOR</span></p>
+                    </div>
+                    <a href="https://stake.com/registration" target="_blank" class="bonus-card__btn">CLAIM NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use Section (NEW) -->
+        <section class="how-to-section">
+            <h3>How to Use Stake Promo Code</h3>
+
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h4>Visit Stake.com</h4>
+                    <p>Go to Stake.com and click Register to create your new account.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h4>Enter Code RAZOR</h4>
+                    <p>Find the "Code" or "Promo Code" field during sign-up and type RAZOR.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h4>Complete Registration</h4>
+                    <p>Fill in your details, verify email, and set up your account.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h4>Deposit & Get Bonus</h4>
+                    <p>Deposit crypto (BTC, ETH, USDT) and your 200% bonus activates instantly!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Width Image Section (NEW - Below How to Use) -->
+        <section class="full-image-section">
+            <img src="https://www.image2url.com/r2/default/images/1790148216794-0f79f9c3-4f31-4f23-806f-0a17e9cbf845.jpg" alt="Stake Casino Games Preview">
+        </section>
+
+    </main>
+
+    <!-- ================= POP-UP MODAL ================= -->
+    <div class="modal-overlay" id="promoModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            
+            <div class="modal-icon">👻</div>
+            <h2 class="modal-title">Wait! Don't Miss Out</h2>
+            <p class="modal-desc">Get <strong>200% deposit bonus up to $3,000</strong> with exclusive code:</p>
+            
+            <div class="promo-code-box">
+                <p>PROMO CODE</p>
+                <h4>RAZOR</h4>
+            </div>
+
+            <a href="https://stake.com/registration" target="_blank" class="btn-modal-primary">CLAIM YOUR BONUS NOW</a>
+
+            <div class="modal-divider">FOR MORE REWARDS, JOIN</div>
+
+            <a href="https://t.me/TezorFishTG" target="_blank" class="btn-telegram">
+                ✈️ Join our Telegram
+            </a>
+
+            <span class="modal-skip" onclick="closeModal()">No thanks, I'll pass</span>
+        </div>
+    </div>
+
+    <script>
+    // Loader
+    window.addEventListener('load', function () {
+        setTimeout(function () { 
+            document.getElementById('loader').classList.add('hidden'); 
+        }, 300);
+        
+        // POP-UP LOGIC: Show modal after 2.5 seconds
+        setTimeout(function() {
+            document.getElementById('promoModal').classList.add('active');
+        }, 2500);
+    });
+
+    // Close Modal Function
+    function closeModal() {
+        document.getElementById('promoModal').classList.remove('active');
+    }
+
+    // Close on overlay click
+    document.getElementById('promoModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+
+    // Background Floating FX (Canvas)
+    const canvas = document.getElementById('fx-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    const items = [];
+    const symbols = ['$', '₿', 'Ξ', '✦'];
+
+    for (let i = 0; i < 25; i++) {
+        items.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            size: Math.random() * 15 + 10,
+            symbol: symbols[Math.floor(Math.random() * symbols.length)],
+            speedY: -(Math.random() * 0.5 + 0.2),
+            speedX: (Math.random() - 0.5) * 0.3,
+            opacity: Math.random() * 0.3 + 0.1,
+            color: Math.random() > 0.5 ? '#3b82f6' : '#d946ef'
+        });
+    }
+
+    function renderFX() {
+        ctx.clearRect(0, 0, width, height);
+        items.forEach(p => {
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = p.opacity;
+            ctx.font = `${p.size}px Arial`;
+            ctx.fillText(p.symbol, p.x, p.y);
+
+            p.y += p.speedY;
+            p.x += p.speedX;
+
+            if (p.y < -20) {
+                p.y = height + 20;
+                p.x = Math.random() * width;
+            }
+        });
+        requestAnimationFrame(renderFX);
+    }
+    renderFX();
+    </script>
+
+</body>
+</html>
